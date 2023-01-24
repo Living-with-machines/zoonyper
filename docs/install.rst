@@ -2,16 +2,16 @@ Installing Zoonyper
 #############################################################
 
 =================================
-Dependencies
+Dependencies (work in progress)
 =================================
 
-You must have version 3.9 of Python (currently).
+You must have at least version 3.9 of Python (currently).
 
 =================================
 Quick Install in Jupyter Notebook
 =================================
 
-If you just want to try things out or are in a hurry and want to install the developer version in whichever Python kernel you're currently running in a Notebook, here's a handy bash script that you can copy and paste into a Jupyter notebook:
+If you just want to try things out or are in a hurry and want to install the developer version in whichever Python kernel you're currently running in a Notebook, here's a handy bash script that you can copy and paste into a Jupyter notebook. The Notebook should be run in the ### directory:
 
 .. code-block:: bash
 
