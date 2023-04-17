@@ -1,0 +1,104 @@
+auth_file: auth
+project_id: 9943
+subject_sets:
+  "003": 77929
+  "202112_1870_beehive_machine": 100056
+  "202112_1870_The_Cotton_Factory_Times_1": 100777
+  "202112_1870_The_Cotton_Factory_Times_2": 100778
+  "202112_1870_The_Cotton_Factory_Times_3": 100779
+  "202112_1870_The_Cotton_Factory_Times_4": 100780
+  "202112_all_years_beehive_machine": 100042
+  "Accidents - 0002604": 111643
+  "Accidents - 0002605": 111644
+  "Accidents - 0002606": 111640
+  "Accidents - 0002607": 111652
+  "Accidents - 0002608": 111653
+  "Accidents - 0002609": 111654
+  "Accidents - 0002610": 111674
+  "Accidents - 0002611": 111665
+  "Accidents - 0002612": 111666
+  "Accidents - 0002613": 111672
+  "Accidents - British Miner and General Newsman (0003537)": 109749
+  "Accidents - Cannock Chase Examiner (0002606)": 109746
+  "Accidents - Cotton Factory Times (0002596)": 109762
+  "Accidents - Forest of Dean Examiner (0002595)": 109739
+  "Accidents - Glasgow Chronicle (0003088)": 109732
+  "Accidents - Glasgow Courier (0003089)": 109761
+  "Accidents - Manchester Daily Times (0002085)": 109738
+  "Accidents - Manchester Examiner (0003398)": 109748
+  "Accidents - Midland examiner and times (0002605)": 109745
+  "Accidents - Midland examiner and Wolverhampton times (0002604)": 109744
+  "Accidents - Miner and Workman's Advocate (0003539)": 109763
+  "Accidents - Shropshire Examiner (0002600)": 111617
+  "Accidents - South Staffordshire Examiner (0002599)": 109742
+  "Accidents - The Midland examiner and Wolverhampton times (0002604)": 111624
+  "Accidents - The Miner (0003538)": 109750
+  "Accidents - Warrington and Mid-Cheshire Examiner (0002598)": 109740
+  "Accidents - Warrington Examiner (0002597)": 109729
+  "Accidents - Widnes Examiner (0002601)": 111645
+  "Accidents - Wolverhampton times and Bilston, Willenhall, Wednesfield, and Sedgley journal (0002602)": 111641
+  "Accidents - Wolverhampton times and Midland Counties advertiser (0002603)": 111642
+  "Accidents II": 102701
+  "Accidents II - engine": 102709
+  "batch_20190911_001": 77830
+  "batch_20190911_002": 77847
+  "batch_20190916_004": 77930
+  "bike_01": 111974
+  "bike_02": 112011
+  "car_01": 111859
+  "car_01_b": 111860
+  "Classifying_Machines_Set_1": 89678
+  "Classifying_Machines_Set_10": 89691
+  "Classifying_Machines_Set_2": 89679
+  "Classifying_Machines_Set_3": 89680
+  "Classifying_Machines_Set_4": 89681
+  "Classifying_Machines_Set_5": 89682
+  "Classifying_Machines_Set_6": 89683
+  "Classifying_Machines_Set_7": 89688
+  "Classifying_Machines_Set_8": 89689
+  "Classifying_Machines_Set_9": 89690
+  "coach_01": 112337
+  "coach_02": 112339
+  "Defining_Machines_Set_1": 87584
+  "Defining_Machines_Set_2": 87778
+  "Describing_Machines_Set_1": 90167
+  "Describing_Machines_Set_10": 90176
+  "Describing_Machines_Set_11": 90179
+  "Describing_Machines_Set_12": 90180
+  "Describing_Machines_Set_13": 90181
+  "Describing_Machines_Set_14": 90182
+  "Describing_Machines_Set_15": 90183
+  "Describing_Machines_Set_16": 90184
+  "Describing_Machines_Set_17": 90185
+  "Describing_Machines_Set_18": 90186
+  "Describing_Machines_Set_19": 90187
+  "Describing_Machines_Set_2": 90168
+  "Describing_Machines_Set_20": 90188
+  "Describing_Machines_Set_21": 90190
+  "Describing_Machines_Set_22": 90191
+  "Describing_Machines_Set_23": 90192
+  "Describing_Machines_Set_24": 90193
+  "Describing_Machines_Set_3": 90169
+  "Describing_Machines_Set_4": 90170
+  "Describing_Machines_Set_5": 90171
+  "Describing_Machines_Set_6": 90172
+  "Describing_Machines_Set_7": 90173
+  "Describing_Machines_Set_8": 90174
+  "Describing_Machines_Set_9": 90175
+  "Describing_This_Machine_miniset": 89694
+  "Dynamic set accidents for workflow 21525": 105221
+  "July2021_boiler_explosion": 96812
+  "July2021_shocking_accident": 96814
+  "July2021_the_machines": 96813
+  "mini_003": 79477
+  "OneOrMoreRelevantArticles": 109975
+  "SingleArticlesMentioningAccidents": 78831
+  "SingleArticlesMentioningTransportAccidents": 79434
+  "Subjects for expert review": 105247
+  "Subset of Accidents II (#102701) and Accidents II - engine (#102709)": 103618
+  "t": 111501
+  "test_subject_set_kasra": 100040
+  "trolley_01": 111500
+  "trolley_02": 111502
+  "Trolley_batch": 111385
+cache: cache
