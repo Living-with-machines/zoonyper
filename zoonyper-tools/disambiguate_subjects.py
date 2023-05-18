@@ -9,6 +9,7 @@ from zoonyper.utils import get_md5
 
 import requests
 import json
+import pickle
 import time
 from yaml import load, Loader
 
@@ -60,7 +61,8 @@ lst = [x for x in subject_set_names if x not in done_subject_sets]
 
 cache.mkdir(parents=True, exist_ok=True)
 for subject_set_name in tqdm(lst):
-    data_file = cache / f"{subject_set_name}.json"
+    data_file = cache / f"{subject_set_name}"
+    print(data_file)
     if data_file.exists():
         continue
     subject_set_id = subject_set_ids[subject_set_name]
@@ -68,11 +70,9 @@ for subject_set_name in tqdm(lst):
     subjects = []
     for subject in (pbar_ss := tqdm(subject_set.subjects, position=0)):
         pbar_ss.update()
-        if "!zooniverse_file_md5" in subject.metadata.keys():
-            continue
         subjects.append(subject)
 
-    data_file.write_text(json.dumps(subjects))
+    data_file.write_bytes(pickle.dumps(subjects))
 
 for subject_set_name in (pbar_ss := tqdm(lst, position=0)):
     pbar_ss.set_description(subject_set_name)
