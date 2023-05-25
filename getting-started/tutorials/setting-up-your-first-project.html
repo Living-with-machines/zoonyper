@@ -165,8 +165,8 @@
 </form>
 <div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
   <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../installing.html">Installing Zoonyper</a></li>
 <li class="toctree-l1 current has-children"><a class="reference internal" href="../index.html">Getting Started</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../install.html">Installing Zoonyper</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../introduction-to-zoonypers-data-structures.html">Introduction to Zoonyper’s Data Structures</a></li>
 <li class="toctree-l2 current has-children"><a class="reference internal" href="index.html">Tutorials</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
 <li class="toctree-l3 current current-page"><a class="current reference internal" href="#">Setting up your first project</a></li>
@@ -178,11 +178,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../api/index.html">API Documentation</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../api/project.html">Project</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../api/utils.html">Utils</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="../../reference.html">Reference</a></li>
 </ul>
 
 </div>
@@ -221,9 +217,11 @@
 <h1>Setting up your first project<a class="headerlink" href="#setting-up-your-first-project" title="Permalink to this heading">#</a></h1>
 <section id="downloading-and-organizing-files-for-your-zoonyper-project">
 <h2>Downloading and Organizing Files for Your Zoonyper Project<a class="headerlink" href="#downloading-and-organizing-files-for-your-zoonyper-project" title="Permalink to this heading">#</a></h2>
-<p>To set up your Zoonyper project, you’ll need to download all the necessary files and store them in the same folder. Here’s how to do it:</p>
+<p>To set up your Zoonyper project, you’ll need to download all the necessary
+files and store them in the same folder. Here’s how to do it:</p>
 <ol class="arabic">
-<li><p>Go to the Lab page of your Zooniverse project and navigate to the “Data Exports” section.</p></li>
+<li><p>Go to the Lab page of your Zooniverse project and navigate to the “Data
+Exports” section.</p></li>
 <li><p>Download the following files:</p>
 <ul class="simple">
 <li><p>Classifications (as a CSV file)</p></li>
@@ -232,9 +230,11 @@
 <li><p>Talk comments (as a JSON file)</p></li>
 <li><p>Tags (as a JSON file)</p></li>
 </ul>
-<p><em>Note: Be sure to select the correct files and formats, and avoid downloading the “workflow classifications” file.</em></p>
+<p><em>Note: Be sure to select the correct files and formats, and avoid
+downloading the “workflow classifications” file.</em></p>
 </li>
-<li><p>Once the files are downloaded, move them to a new folder and give each file a specific name:</p>
+<li><p>Once the files are downloaded, move them to a new folder and give each file
+a specific name:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">classifications.csv</span></code> for the classifications file</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">subjects.csv</span></code> for the subjects file</p></li>
@@ -245,10 +245,13 @@
 <p><em>(Note: Remember that the last two files are JSON files and not CSV files.)</em></p>
 </li>
 </ol>
-<p>By following these steps, you’ll have all the necessary files organized and ready to use for your Zoonyper project.</p>
+<p>By following these steps, you’ll have all the necessary files organized and
+ready to use for your Zoonyper project.</p>
 <div class="dropdown admonition">
 <p class="admonition-title">Unpacking comments and tags .tar files</p>
-<p>The comments and tags files are downloaded as .tar files, which need to be unpacked on your local machine. On macOS, you can use the built-in Archive Utility.</p>
+<p>The comments and tags files are downloaded as .tar files, which need to be
+unarchived on your local machine. On macOS, you can use the built-in Archive
+Utility.</p>
 <p>If you’d rather use the terminal, you can run the following command:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>tar<span class="w"> </span>-xvzf<span class="w"> </span>&lt;path&gt;
 </pre></div>
@@ -257,9 +260,12 @@
 </section>
 <section id="initializing-a-project-with-the-downloaded-files">
 <h2>Initializing a <code class="docutils literal notranslate"><span class="pre">Project</span></code> with the Downloaded Files<a class="headerlink" href="#initializing-a-project-with-the-downloaded-files" title="Permalink to this heading">#</a></h2>
-<p>Once you’ve downloaded and organized the necessary files for your Zoonyper project (in the previous step), you can initiate a new <code class="docutils literal notranslate"><span class="pre">Project</span></code> in Python. Here’s how to do it:</p>
+<p>Once you’ve downloaded and organized the necessary files for your Zoonyper
+project (in the previous step), you can initiate a new <code class="docutils literal notranslate"><span class="pre">Project</span></code> in Python.
+Here’s how to do it:</p>
 <ol class="arabic">
-<li><p>Open a new Python script or Jupyter notebook and import the Zoonyper library:</p>
+<li><p>Open a new Python script or Jupyter notebook and import the Zoonyper
+library:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">zoonyper</span> <span class="kn">import</span> <span class="n">Project</span>
 </pre></div>
 </div>
@@ -268,19 +274,29 @@
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">project</span> <span class="o">=</span> <span class="n">Project</span><span class="p">(</span><span class="s2">&quot;path/to/input-directory&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>(Replace <code class="docutils literal notranslate"><span class="pre">&quot;path/to/input-directory&quot;</span></code> with the actual path to your directory.)</p>
-<p>This creates a new <code class="docutils literal notranslate"><span class="pre">Project</span></code> object that will contain all the necessary data from the downloaded files.</p>
+<p>(Replace <code class="docutils literal notranslate"><span class="pre">&quot;path/to/input-directory&quot;</span></code> with the actual path to your
+directory.)</p>
+<p>This creates a new <code class="docutils literal notranslate"><span class="pre">Project</span></code> object that will contain all the necessary
+data from the downloaded files.</p>
 </li>
 </ol>
-<p>That’s it! You’ve now successfully initialized a Zoonyper project with your downloaded files.</p>
+<p>That’s it! You’ve now successfully initialized a Zoonyper project with your
+downloaded files.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>If you are interested in alternative ways to set up a project, check out the <a class="reference internal" href="loading-a-project.html#loading-a-project"><span class="std std-ref">Loading a Project</span></a> tutorial. (The method shown here is equivalent to <a class="reference internal" href="loading-a-project.html#loading-project-option-2"><span class="std std-ref">“Option 2: Specifying directory with required files”</span></a>)</p>
+<p>If you are interested in alternative ways to set up a project, check out the
+<a class="reference internal" href="loading-a-project.html#loading-a-project"><span class="std std-ref">Loading a Project</span></a> tutorial. (The method shown here is equivalent to
+<a class="reference internal" href="loading-a-project.html#loading-project-option-2"><span class="std std-ref">“Option 2: Specifying directory with required files”</span></a>)</p>
 </div>
 </section>
 <section id="disambiguating-subjects-optional">
 <h2>Disambiguating subjects (Optional)<a class="headerlink" href="#disambiguating-subjects-optional" title="Permalink to this heading">#</a></h2>
-<p>To avoid ambiguous classifications and consolidate all classifications per actual subject (rather than the subjects uploaded to Zooniverse), you can perform a process called <em>disambiguation</em> on the downloaded subjects. Disambiguation involves downloading each subject image and extracting a unique identifier for each one, which Zoonyper can use to group identical subjects together.</p>
+<p>To avoid ambiguous classifications and consolidate all classifications per
+actual subject (rather than the subjects uploaded to Zooniverse), you can
+perform a process called <em>disambiguation</em> on the downloaded subjects.
+Disambiguation involves downloading each subject image and extracting a unique
+identifier for each one, which Zoonyper can use to group identical subjects
+together.</p>
 <p>To disambiguate the subjects in your Zoonyper project, follow these steps:</p>
 <ol class="arabic">
 <li><p>Create a new folder to store the subject image files:</p>
@@ -292,31 +308,47 @@
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">project</span><span class="o">.</span><span class="n">download_all_subjects</span><span class="p">(</span><span class="n">sleep</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="n">organize_by_workflow</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">organize_by_subject_id</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Note that this step will take some time as you will have to download every single subject processed in your project. Depending on how many subjects you have across all your workflows, it may take several hours.</p>
-<p>By setting the <code class="docutils literal notranslate"><span class="pre">sleep=(0,</span> <span class="pre">1)</span></code> parameter, we allow the method to sleep a random number between 0 and 1 in-between each download. If you keep running into timeout errors, you can increase these numbers to see if it helps.</p>
-<p>Setting <code class="docutils literal notranslate"><span class="pre">organize_by_workflow=False</span></code> and <code class="docutils literal notranslate"><span class="pre">organize_by_subject_id=False</span></code> will organize the downloaded files as a flat structure in the downloads folder.</p>
+<p>Note that this step will take some time as you will have to download every
+single subject processed in your project. Depending on how many subjects you
+have across all your workflows, it may take several hours.</p>
+<p>By setting the <code class="docutils literal notranslate"><span class="pre">sleep=(0,</span> <span class="pre">1)</span></code> parameter, we allow the method to wait a
+random number of seconds (between 0 and 1 in the example) in-between each
+download. If you keep running into timeout errors, you can increase these
+numbers to see if it helps.</p>
+<p>Setting <code class="docutils literal notranslate"><span class="pre">organize_by_workflow=False</span></code> and <code class="docutils literal notranslate"><span class="pre">organize_by_subject_id=False</span></code>
+will organize the downloaded files as a flat structure in the downloads
+folder.</p>
 </li>
-<li><p>Next, call the <code class="docutils literal notranslate"><span class="pre">.disambiguate_subjects()</span></code> method on your <code class="docutils literal notranslate"><span class="pre">Project</span></code> object and pass in the download directory as its argument:</p>
+<li><p>Next, call the <code class="docutils literal notranslate"><span class="pre">.disambiguate_subjects()</span></code> method on your <code class="docutils literal notranslate"><span class="pre">Project</span></code></p></li>
+<li><p>object and pass in the download directory as its argument:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">project</span><span class="o">.</span><span class="n">disambiguate_subjects</span><span class="p">()</span>
 </pre></div>
 </div>
-<p>This method will download each subject image and extract its unique identifier, which will be stored in the project’s metadata. Note that this process may take some time depending on the number of subjects in your project.</p>
+<p>This method will download each subject image and extract its unique
+identifier, which will be stored in the project’s metadata. Note that this
+process may take some time depending on the number of subjects in your
+project.</p>
 </li>
 </ol>
-<p>That’s it! You’ve now successfully disambiguated the subjects in your Zoonyper project.</p>
+<p>That’s it! You’ve now successfully disambiguated the subjects in your Zoonyper
+project.</p>
 </section>
 <section id="finishing-up">
 <h2>Finishing Up<a class="headerlink" href="#finishing-up" title="Permalink to this heading">#</a></h2>
-<p>Congratulations, you’ve successfully set up and initialized a Zoonyper project with your downloaded files! Here are a couple of final tips to help you get started:</p>
+<p>Congratulations, you’ve successfully set up and initialized a Zoonyper project
+with your downloaded files! Here are a couple of final tips to help you get
+started:</p>
 <ul>
 <li><p>Access the project’s subjects and classifications as Pandas DataFrames:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">project</span><span class="o">.</span><span class="n">subjects</span>
 <span class="n">project</span><span class="o">.</span><span class="n">classifications</span>
 </pre></div>
 </div>
-<p>These two DataFrames contain all the information you need to start analyzing and visualizing your project data.</p>
+<p>These two DataFrames contain all the information you need to start analyzing
+and visualizing your project data.</p>
 </li>
-<li><p>Check out the Zoonyper documentation and examples for more ideas on how to use the library. Here are a few topics to get you started:</p>
+<li><p>Check out the Zoonyper documentation and examples for more ideas on how to
+use the library. Here are a few topics to get you started:</p>
 <ul class="simple">
 <li><p>Working with workflows and tasks</p></li>
 <li><p>Filtering and grouping classifications</p></li>

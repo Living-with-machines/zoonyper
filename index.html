@@ -3,7 +3,7 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="Getting Started" href="getting-started/index.html" />
+<link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="Installing Zoonyper" href="installing.html" />
 
     <!-- Generated with Sphinx 5.3.0 and Furo 2022.12.07 -->
         <title>Zoonyper 0.1.0 documentation</title>
@@ -165,8 +165,8 @@
 </form>
 <div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
   <ul>
+<li class="toctree-l1"><a class="reference internal" href="installing.html">Installing Zoonyper</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="getting-started/index.html">Getting Started</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="getting-started/install.html">Installing Zoonyper</a></li>
 <li class="toctree-l2"><a class="reference internal" href="getting-started/introduction-to-zoonypers-data-structures.html">Introduction to Zoonyper’s Data Structures</a></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="getting-started/tutorials/index.html">Tutorials</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="getting-started/tutorials/setting-up-your-first-project.html">Setting up your first project</a></li>
@@ -178,11 +178,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="api/index.html">API Documentation</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="api/project.html">Project</a></li>
-<li class="toctree-l2"><a class="reference internal" href="api/utils.html">Utils</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="reference.html">Reference</a></li>
 </ul>
 
 </div>
@@ -219,21 +215,53 @@
         <article role="main">
           <section id="about-zoonyper">
 <h1>About <code class="docutils literal notranslate"><span class="pre">zoonyper</span></code><a class="headerlink" href="#about-zoonyper" title="Permalink to this heading">#</a></h1>
-<p><strong>Zoonyper</strong> is a Python library that facilitates interpretation and wrangling for Zooniverse files in Jupyter (and Python more generally).</p>
+<p><strong>Zoonyper</strong> is a Python library, designed to make it easy for users to import
+and process Zooniverse annotations and their metadata in your own Python code.
+It is especially designed for use in [Jupyter Notebooks](<a class="reference external" href="https://jupyter.org/">https://jupyter.org/</a>).</p>
+<section id="purpose">
+<h2>Purpose<a class="headerlink" href="#purpose" title="Permalink to this heading">#</a></h2>
+<p>Zoonyper can process the output files from the Zooniverse citizen science
+platform, and facilitate data wrangling, compression, and output into JSON and
+CSV files. The output files can then be more easily used in e.g. Observable
+visualisations.</p>
+</section>
+<section id="background">
+<h2>Background<a class="headerlink" href="#background" title="Permalink to this heading">#</a></h2>
+<p>The library was created as part of the
+<a class="reference external" href="https://livingwithmachines.ac.uk">Living with Machines project</a>, a project
+aimed to generate new historical perspectives on the effects of the
+mechanisation of labour on the lives of ordinary people during the long
+nineteenth century. As part of that work, we have used newspapers for
+historical research at scale. In that work, it has been important for us to
+use the newspapers also as source documents for crowdsourced activities. The
+platform used for the crowdsourced activities is Zooniverse, created for
+citizen science projects where volunteers contribute to scientific research
+projects by annotating and categorizing images or other data. The annotations
+created by volunteers are collected as “classifications” in the Zooniverse
+system.</p>
+<p>In the Living with Machines project, we used the Zooniverse platform to
+annotate articles extracted from historical newspapers. We winnowed out
+articles that were deemed unsuitable or irrelevant for the study, and then
+asked volunteers to help us with more detailed classifications on the remaining
+articles. This helps to ensure that the annotations are focused and accurate,
+and that the results of the study are meaningful and relevant. The articles,
+along with metadata, were included in Zooniverse manifests. The final goal for
+the research overall was to use the annotations to study the content of these
+historical newspapers and gain insights into the events and trends of the past.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This project is under active development.</p>
 </div>
 <section id="contents">
-<h2>Contents<a class="headerlink" href="#contents" title="Permalink to this heading">#</a></h2>
+<h3>Contents<a class="headerlink" href="#contents" title="Permalink to this heading">#</a></h3>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="getting-started/index.html">Getting Started</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="getting-started/install.html">Installing Zoonyper</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="getting-started/install.html#in-development">In development</a></li>
-<li class="toctree-l3"><a class="reference internal" href="getting-started/install.html#quick-install-in-jupyter-notebook">Quick Install in Jupyter Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installing.html">Installing Zoonyper</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="installing.html#in-development">In development</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installing.html#quick-install-in-jupyter-notebook">Quick Install in Jupyter Notebook</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="getting-started/index.html">Getting Started</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="getting-started/introduction-to-zoonypers-data-structures.html">Introduction to Zoonyper’s Data Structures</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="getting-started/introduction-to-zoonypers-data-structures.html#dataframes-constructed-from-the-csv-files">DataFrames constructed from the CSV files</a></li>
 <li class="toctree-l3"><a class="reference internal" href="getting-started/introduction-to-zoonypers-data-structures.html#shortcuts-to-column-summaries">Shortcuts to Column Summaries</a></li>
@@ -249,14 +277,14 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="api/index.html">API Documentation</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="api/project.html">Project</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="api/project.html#zoonyper.project.Project"><code class="docutils literal notranslate"><span class="pre">Project</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="reference.html">Reference</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="reference.html#module-zoonyper.project">Project</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="reference.html#zoonyper.project.Project"><code class="docutils literal notranslate"><span class="pre">Project</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="api/utils.html">Utils</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="api/utils.html#zoonyper.utils.Utils"><code class="docutils literal notranslate"><span class="pre">Utils</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="api/utils.html#zoonyper.utils.get_current_dir"><code class="docutils literal notranslate"><span class="pre">get_current_dir()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference.html#module-zoonyper.utils">Utils</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="reference.html#zoonyper.utils.Utils"><code class="docutils literal notranslate"><span class="pre">Utils</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="reference.html#zoonyper.utils.get_current_dir"><code class="docutils literal notranslate"><span class="pre">get_current_dir()</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -265,12 +293,13 @@
 </div>
 </section>
 <section id="indices-and-tables">
-<h2>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this heading">#</a></h2>
+<h3>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></p></li>
 <li><p><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></p></li>
 <li><p><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></p></li>
 </ul>
+</section>
 </section>
 </section>
 
@@ -279,12 +308,12 @@
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="getting-started/index.html">
+          <a class="next-page" href="installing.html">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">Getting Started</div>
+                <div class="title">Installing Zoonyper</div>
               </div>
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>
@@ -320,8 +349,12 @@
           <div class="toc-tree">
             <ul>
 <li><a class="reference internal" href="#">About <code class="docutils literal notranslate"><span class="pre">zoonyper</span></code></a><ul>
+<li><a class="reference internal" href="#purpose">Purpose</a></li>
+<li><a class="reference internal" href="#background">Background</a><ul>
 <li><a class="reference internal" href="#contents">Contents</a></li>
 <li><a class="reference internal" href="#indices-and-tables">Indices and tables</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>

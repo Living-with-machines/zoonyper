@@ -3,7 +3,7 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" /><link rel="next" title="API Documentation" href="../../api/index.html" /><link rel="prev" title="Counting annotations" href="counting-annotations.html" />
+<link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" /><link rel="next" title="Reference" href="../../reference.html" /><link rel="prev" title="Counting annotations" href="counting-annotations.html" />
 
     <!-- Generated with Sphinx 5.3.0 and Furo 2022.12.07 -->
         <title>Handling Comments - Zoonyper 0.1.0 documentation</title>
@@ -165,8 +165,8 @@
 </form>
 <div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
   <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../installing.html">Installing Zoonyper</a></li>
 <li class="toctree-l1 current has-children"><a class="reference internal" href="../index.html">Getting Started</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../install.html">Installing Zoonyper</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../introduction-to-zoonypers-data-structures.html">Introduction to Zoonyper’s Data Structures</a></li>
 <li class="toctree-l2 current has-children"><a class="reference internal" href="index.html">Tutorials</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="setting-up-your-first-project.html">Setting up your first project</a></li>
@@ -178,11 +178,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../api/index.html">API Documentation</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../api/project.html">Project</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../api/utils.html">Utils</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="../../reference.html">Reference</a></li>
 </ul>
 
 </div>
@@ -219,21 +215,32 @@
         <article role="main">
           <section id="handling-comments">
 <h1>Handling Comments<a class="headerlink" href="#handling-comments" title="Permalink to this heading">#</a></h1>
-<p>Comments are an important part of <code class="docutils literal notranslate"><span class="pre">zoopyper</span></code>’s functionality. They allow access to discussions from Zooniverse’s Talk functionality, where volunteers contribute comments on the crowdsourced citizen science projects where they can discuss the project’s subjects.</p>
-<p>This section will show you how to handle comments using the <code class="docutils literal notranslate"><span class="pre">zoopyper</span></code> package, including how to get access to all comments, how to get pre-filtered comments, and how to get comments for a specific subject.</p>
+<p>Comments are an important part of <code class="docutils literal notranslate"><span class="pre">zoopyper</span></code>’s functionality. They allow
+access to discussions from Zooniverse’s Talk functionality, where volunteers
+contribute comments on the crowdsourced citizen science projects where they can
+discuss the project’s subjects.</p>
+<p>This section will show you how to handle comments using the <code class="docutils literal notranslate"><span class="pre">zoopyper</span></code>
+package, including how to get access to all comments, how to get pre-filtered
+comments, and how to get comments for a specific subject.</p>
 <section id="getting-access-to-all-comments">
 <h2>Getting Access to All Comments<a class="headerlink" href="#getting-access-to-all-comments" title="Permalink to this heading">#</a></h2>
-<p>To get access to all comments in the project, you can use the <code class="docutils literal notranslate"><span class="pre">Project.comments</span></code> property:</p>
+<p>To get access to all comments in the project, you can use the
+<code class="docutils literal notranslate"><span class="pre">Project.comments</span></code> property:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Get all comments for the project</span>
 <span class="n">project</span><span class="o">.</span><span class="n">comments</span>
 </pre></div>
 </div>
-<p>This will return a <a class="reference external" href="http://pandas.pydata.org/pandas-docs/dev/reference/api/pandas.DataFrame.html#pandas.DataFrame" title="(in pandas v2.1.0.dev0+838.g8bdc304471)"><code class="xref py py-class docutils literal notranslate"><span class="pre">pandas.DataFrame</span></code></a> containing all the comments for the project.</p>
+<p>This will return a <a class="reference external" href="http://pandas.pydata.org/pandas-docs/dev/reference/api/pandas.DataFrame.html#pandas.DataFrame" title="(in pandas v2.1.0.dev0+838.g8bdc304471)"><code class="xref py py-class docutils literal notranslate"><span class="pre">pandas.DataFrame</span></code></a> containing all the comments for
+the project.</p>
 </section>
 <section id="getting-pre-filtered-comments">
 <h2>Getting Pre-Filtered Comments<a class="headerlink" href="#getting-pre-filtered-comments" title="Permalink to this heading">#</a></h2>
-<p>To get a pre-filtered comments DataFrame, including only non-staff members, you can use the <code class="docutils literal notranslate"><span class="pre">Project.get_comments()</span></code> method with the <code class="docutils literal notranslate"><span class="pre">include_staff=False</span></code> setting.</p>
-<p>If you run it before informing the <code class="docutils literal notranslate"><span class="pre">Project</span></code> which users count as “staff”, you will get a warning. In the example below, we start by letting the <code class="docutils literal notranslate"><span class="pre">Project</span></code> know who is a staff member:</p>
+<p>To get a pre-filtered comments DataFrame, including only non-staff members,
+you can use the <code class="docutils literal notranslate"><span class="pre">Project.get_comments()</span></code> method with the
+<code class="docutils literal notranslate"><span class="pre">include_staff=False</span></code> setting.</p>
+<p>If you run it before informing the <code class="docutils literal notranslate"><span class="pre">Project</span></code> which users count as “staff”,
+you will get a warning. In the example below, we start by letting the
+<code class="docutils literal notranslate"><span class="pre">Project</span></code> know who is a staff member:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Set the staff property on the project to a list of usernames</span>
 <span class="n">project</span><span class="o">.</span><span class="n">set_staff</span><span class="p">([</span><span class="s2">&quot;miaridge&quot;</span><span class="p">,</span> <span class="s2">&quot;kallewesterling&quot;</span><span class="p">])</span>
 
@@ -241,17 +248,23 @@
 <span class="n">project</span><span class="o">.</span><span class="n">get_comments</span><span class="p">(</span><span class="n">include_staff</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>This will return a <a class="reference external" href="http://pandas.pydata.org/pandas-docs/dev/reference/api/pandas.DataFrame.html#pandas.DataFrame" title="(in pandas v2.1.0.dev0+838.g8bdc304471)"><code class="xref py py-class docutils literal notranslate"><span class="pre">pandas.DataFrame</span></code></a> containing only comments from non-staff members.</p>
+<p>This will return a <a class="reference external" href="http://pandas.pydata.org/pandas-docs/dev/reference/api/pandas.DataFrame.html#pandas.DataFrame" title="(in pandas v2.1.0.dev0+838.g8bdc304471)"><code class="xref py py-class docutils literal notranslate"><span class="pre">pandas.DataFrame</span></code></a> containing only comments from
+non-staff members.</p>
 </section>
 <section id="getting-comments-for-a-specific-subject">
 <h2>Getting Comments for a Specific Subject<a class="headerlink" href="#getting-comments-for-a-specific-subject" title="Permalink to this heading">#</a></h2>
-<p>To get comments for a specific subject, you can use the <code class="docutils literal notranslate"><span class="pre">Project.get_subject_comments()</span></code> method with the subject ID as the argument:</p>
+<p>To get comments for a specific subject, you can use the
+<code class="docutils literal notranslate"><span class="pre">Project.get_subject_comments()</span></code> method with the subject ID as the argument:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Get comments for a specific subject</span>
 <span class="n">project</span><span class="o">.</span><span class="n">get_subject_comments</span><span class="p">(</span><span class="mi">73334345</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>This will return a <a class="reference external" href="http://pandas.pydata.org/pandas-docs/dev/reference/api/pandas.DataFrame.html#pandas.DataFrame" title="(in pandas v2.1.0.dev0+838.g8bdc304471)"><code class="xref py py-class docutils literal notranslate"><span class="pre">pandas.DataFrame</span></code></a> containing all the comments for the specified subject.</p>
-<p>Note that, by default, the <code class="docutils literal notranslate"><span class="pre">get_subject_comments</span></code> method will always includes comments from contributors marked as “staff” in Zoonyper. You can disable this by informing the <code class="docutils literal notranslate"><span class="pre">Project</span></code> instance about which usernames count as staff and then passing the parameter <code class="docutils literal notranslate"><span class="pre">include_staff=False</span></code> to the method:</p>
+<p>This will return a <a class="reference external" href="http://pandas.pydata.org/pandas-docs/dev/reference/api/pandas.DataFrame.html#pandas.DataFrame" title="(in pandas v2.1.0.dev0+838.g8bdc304471)"><code class="xref py py-class docutils literal notranslate"><span class="pre">pandas.DataFrame</span></code></a> containing all the comments for
+the specified subject.</p>
+<p>Note that, by default, the <code class="docutils literal notranslate"><span class="pre">get_subject_comments</span></code> method will always includes
+comments from contributors marked as “staff” in Zoonyper. You can disable this
+by informing the <code class="docutils literal notranslate"><span class="pre">Project</span></code> instance about which usernames count as staff and
+then passing the parameter <code class="docutils literal notranslate"><span class="pre">include_staff=False</span></code> to the method:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Set the staff property on the project to a list of usernames</span>
 <span class="n">project</span><span class="o">.</span><span class="n">set_staff</span><span class="p">([</span><span class="s2">&quot;miaridge&quot;</span><span class="p">,</span> <span class="s2">&quot;kallewesterling&quot;</span><span class="p">])</span>
 
@@ -267,12 +280,12 @@
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="../../api/index.html">
+          <a class="next-page" href="../../reference.html">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">API Documentation</div>
+                <div class="title">Reference</div>
               </div>
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>

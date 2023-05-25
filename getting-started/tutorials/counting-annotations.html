@@ -165,8 +165,8 @@
 </form>
 <div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
   <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../installing.html">Installing Zoonyper</a></li>
 <li class="toctree-l1 current has-children"><a class="reference internal" href="../index.html">Getting Started</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../install.html">Installing Zoonyper</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../introduction-to-zoonypers-data-structures.html">Introduction to Zoonyper’s Data Structures</a></li>
 <li class="toctree-l2 current has-children"><a class="reference internal" href="index.html">Tutorials</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="setting-up-your-first-project.html">Setting up your first project</a></li>
@@ -178,11 +178,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../api/index.html">API Documentation</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../api/project.html">Project</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../api/utils.html">Utils</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="../../reference.html">Reference</a></li>
 </ul>
 
 </div>
@@ -219,7 +215,10 @@
         <article role="main">
           <section id="counting-annotations">
 <h1>Counting annotations<a class="headerlink" href="#counting-annotations" title="Permalink to this heading">#</a></h1>
-<p><a class="reference internal" href="../../api/project.html#zoonyper.project.Project.classification_counts" title="zoonyper.project.Project.classification_counts"><code class="xref py py-meth docutils literal notranslate"><span class="pre">zoonyper.project.Project.classification_counts()</span></code></a> is a useful method for retrieving the number of different classifications per subject ID for any given workflow. It takes two arguments, the workflow ID (passed as <code class="docutils literal notranslate"><span class="pre">workflow_id</span></code>) and the task number (<code class="docutils literal notranslate"><span class="pre">task_number</span></code>) that you want to extract:</p>
+<p><a class="reference internal" href="../../reference.html#zoonyper.project.Project.classification_counts" title="zoonyper.project.Project.classification_counts"><code class="xref py py-meth docutils literal notranslate"><span class="pre">zoonyper.project.Project.classification_counts()</span></code></a> is a useful method for
+retrieving the number of different classifications per subject ID for any given
+workflow. It takes two arguments, the workflow ID (passed as <code class="docutils literal notranslate"><span class="pre">workflow_id</span></code>)
+and the task number (<code class="docutils literal notranslate"><span class="pre">task_number</span></code>) that you want to extract:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">project</span><span class="o">.</span><span class="n">classification_counts</span><span class="p">(</span><span class="n">workflow_id</span><span class="o">=</span><span class="mi">12038</span><span class="p">,</span> <span class="n">task_number</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -227,7 +226,8 @@
 <p class="admonition-title">Note</p>
 <p>The method currently works best with text annotations.</p>
 </div>
-<p>Using <code class="docutils literal notranslate"><span class="pre">classification_counts</span></code>, we can also easily check for “agreement”, say when all annotators have agreed on <em>one</em> classification:</p>
+<p>Using <code class="docutils literal notranslate"><span class="pre">classification_counts</span></code>, we can also easily check for “agreement”, say
+when all annotators have agreed on <em>one</em> classification:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="n">classifications</span> <span class="o">=</span> <span class="n">project</span><span class="o">.</span><span class="n">classification_counts</span><span class="p">(</span><span class="n">workflow_id</span><span class="o">=</span><span class="mi">12038</span><span class="p">,</span> <span class="n">task_number</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
 <span class="linenos">2</span>
 <span class="hll"><span class="linenos">3</span><span class="n">agreement</span> <span class="o">=</span> <span class="p">{</span>
@@ -238,7 +238,8 @@
 <span class="linenos">8</span><span class="nb">print</span><span class="p">(</span><span class="n">agreement</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Similarly, we can construct a code block for whenever at least <strong>four annotators</strong> have agreed on one response for a subject:</p>
+<p>Similarly, we can construct a code block for whenever at least <strong>four
+annotators</strong> have agreed on one response for a subject:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="n">classifications</span> <span class="o">=</span> <span class="n">project</span><span class="o">.</span><span class="n">classification_counts</span><span class="p">(</span><span class="n">workflow_id</span><span class="o">=</span><span class="mi">12038</span><span class="p">,</span> <span class="n">task_number</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
 <span class="linenos">2</span>
 <span class="hll"><span class="linenos">3</span><span class="n">agreement</span> <span class="o">=</span> <span class="p">{</span>

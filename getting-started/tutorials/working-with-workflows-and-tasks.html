@@ -165,8 +165,8 @@
 </form>
 <div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
   <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../installing.html">Installing Zoonyper</a></li>
 <li class="toctree-l1 current has-children"><a class="reference internal" href="../index.html">Getting Started</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../install.html">Installing Zoonyper</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../introduction-to-zoonypers-data-structures.html">Introduction to Zoonyper’s Data Structures</a></li>
 <li class="toctree-l2 current has-children"><a class="reference internal" href="index.html">Tutorials</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="setting-up-your-first-project.html">Setting up your first project</a></li>
@@ -178,11 +178,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../api/index.html">API Documentation</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../api/project.html">Project</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../api/utils.html">Utils</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="../../reference.html">Reference</a></li>
 </ul>
 
 </div>
@@ -219,26 +215,33 @@
         <article role="main">
           <section id="working-with-workflows-and-tasks">
 <h1>Working with Workflows and Tasks<a class="headerlink" href="#working-with-workflows-and-tasks" title="Permalink to this heading">#</a></h1>
-<p>Zoonyper projects can include one or more workflows, each of which consists of a series of tasks that volunteers complete to classify the project’s subjects. Here’s how you can work with workflows and tasks in Zoonyper:</p>
+<p>Zoonyper projects can include one or more workflows, each of which consists of
+a series of tasks that volunteers complete to classify the project’s subjects.</p>
+<p>Here’s how you can work with workflows and tasks in Zoonyper:</p>
 <ol class="arabic">
 <li><p>Access the project’s workflows as a pandas DataFrame:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">project</span><span class="o">.</span><span class="n">workflows</span>
 </pre></div>
 </div>
-<p>This returns a DataFrame with the workflow ID as the index column and the other column keeping information like:</p>
+<p>This returns a DataFrame with the workflow ID as the index column and the
+other column keeping information like:</p>
 <ul class="simple">
 <li><p>Display name</p></li>
 <li><p>Version</p></li>
 <li><p>Classification counts</p></li>
 </ul>
-<p>See the API documentation for more detailed information about the contents of the workflows DataFrame.</p>
+<p>See the API documentation for more detailed information about the contents
+of the workflows DataFrame.</p>
 </li>
 <li><p>Get subject IDs from a specific workflow’s:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">workflow_id</span> <span class="o">=</span> <span class="n">project</span><span class="o">.</span><span class="n">workflow_ids</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
 <span class="n">project</span><span class="o">.</span><span class="n">workflow_subjects</span><span class="p">(</span><span class="n">workflow_id</span><span class="o">=</span><span class="n">workflow_id</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>This returns a list of the subjects for the specified workflow ID. In this example, we pick the first of the workflow IDs from the list of all the workflow IDs, which can be accessed using the <code class="docutils literal notranslate"><span class="pre">Project</span></code>’s <code class="docutils literal notranslate"><span class="pre">workflow_ids</span></code> property.</p>
+<p>This returns a list of the subjects for the specified workflow ID. In this
+example, we pick the first of the workflow IDs from the list of all the
+workflow IDs, which can be accessed using the <code class="docutils literal notranslate"><span class="pre">Project</span></code>’s
+<code class="docutils literal notranslate"><span class="pre">workflow_ids</span></code> property.</p>
 </li>
 </ol>
 </section>

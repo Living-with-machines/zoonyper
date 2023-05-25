@@ -3,7 +3,7 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="Tutorials" href="tutorials/index.html" /><link rel="prev" title="Installing Zoonyper" href="install.html" />
+<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="Tutorials" href="tutorials/index.html" /><link rel="prev" title="Getting Started" href="index.html" />
 
     <!-- Generated with Sphinx 5.3.0 and Furo 2022.12.07 -->
         <title>Introduction to Zoonyper’s Data Structures - Zoonyper 0.1.0 documentation</title>
@@ -165,8 +165,8 @@
 </form>
 <div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
   <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../installing.html">Installing Zoonyper</a></li>
 <li class="toctree-l1 current has-children"><a class="reference internal" href="index.html">Getting Started</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="install.html">Installing Zoonyper</a></li>
 <li class="toctree-l2 current current-page"><a class="current reference internal" href="#">Introduction to Zoonyper’s Data Structures</a></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="tutorials/index.html">Tutorials</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="tutorials/setting-up-your-first-project.html">Setting up your first project</a></li>
@@ -178,11 +178,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../api/index.html">API Documentation</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../api/project.html">Project</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../api/utils.html">Utils</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="../reference.html">Reference</a></li>
 </ul>
 
 </div>
@@ -221,38 +217,48 @@
 <h1>Introduction to Zoonyper’s Data Structures<a class="headerlink" href="#introduction-to-zoonyper-s-data-structures" title="Permalink to this heading">#</a></h1>
 <section id="dataframes-constructed-from-the-csv-files">
 <h2>DataFrames constructed from the CSV files<a class="headerlink" href="#dataframes-constructed-from-the-csv-files" title="Permalink to this heading">#</a></h2>
-<p><a class="reference internal" href="../api/project.html#zoonyper.project.Project.classifications" title="zoonyper.project.Project.classifications"><code class="xref py py-attr docutils literal notranslate"><span class="pre">Project.classifications</span></code></a> is the classifications DataFrame, and has all the functionality of a regular <a class="reference external" href="http://pandas.pydata.org/pandas-docs/dev/reference/api/pandas.DataFrame.html#pandas.DataFrame" title="(in pandas v2.1.0.dev0+838.g8bdc304471)"><code class="xref py py-class docutils literal notranslate"><span class="pre">pandas.DataFrame</span></code></a>:</p>
+<p><a class="reference internal" href="../reference.html#zoonyper.project.Project.classifications" title="zoonyper.project.Project.classifications"><code class="xref py py-attr docutils literal notranslate"><span class="pre">Project.classifications</span></code></a> is
+the classifications DataFrame, and has all the functionality of a regular
+<a class="reference external" href="http://pandas.pydata.org/pandas-docs/dev/reference/api/pandas.DataFrame.html#pandas.DataFrame" title="(in pandas v2.1.0.dev0+838.g8bdc304471)"><code class="xref py py-class docutils literal notranslate"><span class="pre">pandas.DataFrame</span></code></a>:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">project</span><span class="o">.</span><span class="n">classifications</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
 </pre></div>
 </div>
-<p><a class="reference internal" href="../api/project.html#zoonyper.project.Project.subjects" title="zoonyper.project.Project.subjects"><code class="xref py py-attr docutils literal notranslate"><span class="pre">Project.subjects</span></code></a> is the subjects DataFrame, and has the same <a class="reference external" href="http://pandas.pydata.org/pandas-docs/dev/reference/api/pandas.DataFrame.html#pandas.DataFrame" title="(in pandas v2.1.0.dev0+838.g8bdc304471)"><code class="xref py py-class docutils literal notranslate"><span class="pre">kind</span> <span class="pre">of</span> <span class="pre">functionality</span></code></a>:</p>
+<p><a class="reference internal" href="../reference.html#zoonyper.project.Project.subjects" title="zoonyper.project.Project.subjects"><code class="xref py py-attr docutils literal notranslate"><span class="pre">Project.subjects</span></code></a> is the subjects
+DataFrame, and has the same <a class="reference external" href="http://pandas.pydata.org/pandas-docs/dev/reference/api/pandas.DataFrame.html#pandas.DataFrame" title="(in pandas v2.1.0.dev0+838.g8bdc304471)"><code class="xref py py-class docutils literal notranslate"><span class="pre">kind</span> <span class="pre">of</span> <span class="pre">functionality</span></code></a>:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">project</span><span class="o">.</span><span class="n">subjects</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
 </pre></div>
 </div>
-<p><a class="reference internal" href="../api/project.html#zoonyper.project.Project.workflows" title="zoonyper.project.Project.workflows"><code class="xref py py-attr docutils literal notranslate"><span class="pre">Project.workflows</span></code></a> is the <a class="reference external" href="http://pandas.pydata.org/pandas-docs/dev/reference/api/pandas.DataFrame.html#pandas.DataFrame" title="(in pandas v2.1.0.dev0+838.g8bdc304471)"><code class="xref py py-class docutils literal notranslate"><span class="pre">pandas.DataFrame</span></code></a> representing the project’s workflows:</p>
+<p><a class="reference internal" href="../reference.html#zoonyper.project.Project.workflows" title="zoonyper.project.Project.workflows"><code class="xref py py-attr docutils literal notranslate"><span class="pre">Project.workflows</span></code></a> is the
+<a class="reference external" href="http://pandas.pydata.org/pandas-docs/dev/reference/api/pandas.DataFrame.html#pandas.DataFrame" title="(in pandas v2.1.0.dev0+838.g8bdc304471)"><code class="xref py py-class docutils literal notranslate"><span class="pre">pandas.DataFrame</span></code></a> representing the project’s workflows:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">project</span><span class="o">.</span><span class="n">workflows</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
 </pre></div>
 </div>
 </section>
 <section id="shortcuts-to-column-summaries">
 <h2>Shortcuts to Column Summaries<a class="headerlink" href="#shortcuts-to-column-summaries" title="Permalink to this heading">#</a></h2>
-<p><a class="reference internal" href="../api/project.html#zoonyper.project.Project.workflow_ids" title="zoonyper.project.Project.workflow_ids"><code class="xref py py-attr docutils literal notranslate"><span class="pre">Project.workflow_ids</span></code></a> is a list all of the project’s workflow IDs:</p>
+<p><a class="reference internal" href="../reference.html#zoonyper.project.Project.workflow_ids" title="zoonyper.project.Project.workflow_ids"><code class="xref py py-attr docutils literal notranslate"><span class="pre">Project.workflow_ids</span></code></a> is a list
+of all of the project’s workflow IDs:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">project</span><span class="o">.</span><span class="n">workflow_ids</span>
 </pre></div>
 </div>
-<p><a class="reference internal" href="../api/project.html#zoonyper.project.Project.inactive_workflow_ids" title="zoonyper.project.Project.inactive_workflow_ids"><code class="xref py py-attr docutils literal notranslate"><span class="pre">Project.inactive_workflow_ids</span></code></a> is a list of the project’s inactive workflow’s IDs:</p>
+<p><a class="reference internal" href="../reference.html#zoonyper.project.Project.inactive_workflow_ids" title="zoonyper.project.Project.inactive_workflow_ids"><code class="xref py py-attr docutils literal notranslate"><span class="pre">Project.inactive_workflow_ids</span></code></a>
+is a list of the project’s inactive workflow’s IDs:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">project</span><span class="o">.</span><span class="n">inactive_workflow_ids</span>
 </pre></div>
 </div>
-<p>By using <a class="reference internal" href="../api/project.html#zoonyper.project.Project.workflow_ids" title="zoonyper.project.Project.workflow_ids"><code class="xref py py-attr docutils literal notranslate"><span class="pre">Project.workflow_ids</span></code></a> and <a class="reference internal" href="../api/project.html#zoonyper.project.Project.inactive_workflow_ids" title="zoonyper.project.Project.inactive_workflow_ids"><code class="xref py py-attr docutils literal notranslate"><span class="pre">zoonyper.project.Project.inactive_workflow_ids</span></code></a>, we can get the active workflows by using:</p>
+<p>By using <a class="reference internal" href="../reference.html#zoonyper.project.Project.workflow_ids" title="zoonyper.project.Project.workflow_ids"><code class="xref py py-attr docutils literal notranslate"><span class="pre">Project.workflow_ids</span></code></a>
+and <a class="reference internal" href="../reference.html#zoonyper.project.Project.inactive_workflow_ids" title="zoonyper.project.Project.inactive_workflow_ids"><code class="xref py py-attr docutils literal notranslate"><span class="pre">zoonyper.project.Project.inactive_workflow_ids</span></code></a>, we can get the
+active workflows by using:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">set</span><span class="p">(</span><span class="n">project</span><span class="o">.</span><span class="n">workflow_ids</span><span class="p">)</span> <span class="o">-</span> <span class="nb">set</span><span class="p">(</span><span class="n">project</span><span class="o">.</span><span class="n">inactive_workflow_ids</span><span class="p">)</span>
 </pre></div>
 </div>
-<p><a class="reference internal" href="../api/project.html#zoonyper.project.Project.subject_sets" title="zoonyper.project.Project.subject_sets"><code class="xref py py-attr docutils literal notranslate"><span class="pre">Project.subject_sets</span></code></a> is a list all of the project’s subject sets and corresponding subject IDs:</p>
+<p><a class="reference internal" href="../reference.html#zoonyper.project.Project.subject_sets" title="zoonyper.project.Project.subject_sets"><code class="xref py py-attr docutils literal notranslate"><span class="pre">Project.subject_sets</span></code></a> is a list
+all of the project’s subject sets and corresponding subject IDs:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">project</span><span class="o">.</span><span class="n">subject_sets</span>
 </pre></div>
 </div>
-<p><a class="reference internal" href="../api/project.html#zoonyper.project.Project.subject_urls" title="zoonyper.project.Project.subject_urls"><code class="xref py py-attr docutils literal notranslate"><span class="pre">Project.subject_urls</span></code></a> is a list of all of the project’s subjects and their corresponding URLs:</p>
+<p><a class="reference internal" href="../reference.html#zoonyper.project.Project.subject_urls" title="zoonyper.project.Project.subject_urls"><code class="xref py py-attr docutils literal notranslate"><span class="pre">Project.subject_urls</span></code></a> is a list
+of all of the project’s subjects and their corresponding URLs:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">project</span><span class="o">.</span><span class="n">subject_urls</span>
 </pre></div>
 </div>
@@ -273,14 +279,14 @@
               </div>
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>
-          <a class="prev-page" href="install.html">
+          <a class="prev-page" href="index.html">
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
               <div class="page-info">
                 <div class="context">
                   <span>Previous</span>
                 </div>
                 
-                <div class="title">Installing Zoonyper</div>
+                <div class="title">Getting Started</div>
                 
               </div>
             </a>

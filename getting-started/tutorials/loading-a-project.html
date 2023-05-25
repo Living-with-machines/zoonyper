@@ -165,8 +165,8 @@
 </form>
 <div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
   <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../installing.html">Installing Zoonyper</a></li>
 <li class="toctree-l1 current has-children"><a class="reference internal" href="../index.html">Getting Started</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../install.html">Installing Zoonyper</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../introduction-to-zoonypers-data-structures.html">Introduction to Zoonyper’s Data Structures</a></li>
 <li class="toctree-l2 current has-children"><a class="reference internal" href="index.html">Tutorials</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="setting-up-your-first-project.html">Setting up your first project</a></li>
@@ -178,11 +178,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../api/index.html">API Documentation</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../api/project.html">Project</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../api/utils.html">Utils</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="../../reference.html">Reference</a></li>
 </ul>
 
 </div>
@@ -221,7 +217,10 @@
 <h1>Loading a Project<a class="headerlink" href="#loading-a-project" title="Permalink to this heading">#</a></h1>
 <section id="introduction">
 <h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading">#</a></h2>
-<p>When working with Zoonyper <code class="docutils literal notranslate"><span class="pre">Project</span></code> objects in Python, one of the first steps is to load the required files into a Project object. This section will show you how to load a project using the <code class="docutils literal notranslate"><span class="pre">Project</span></code> class in the <code class="docutils literal notranslate"><span class="pre">zoopyper</span></code> package.</p>
+<p>When working with Zoonyper <code class="docutils literal notranslate"><span class="pre">Project</span></code> objects in Python, one of the first
+steps is to load the required files into a Project object. This section will
+show you how to load a project using the <code class="docutils literal notranslate"><span class="pre">Project</span></code> class in the <code class="docutils literal notranslate"><span class="pre">zoopyper</span></code>
+package.</p>
 </section>
 <section id="required-files">
 <h2>Required Files<a class="headerlink" href="#required-files" title="Permalink to this heading">#</a></h2>
@@ -233,15 +232,19 @@
 <li><p>comments.json</p></li>
 <li><p>tags.json</p></li>
 </ul>
-<p>These files contain the data needed to define the project and its associated tasks.</p>
-<p>You can learn more about how to set those files up in <a class="reference internal" href="setting-up-your-first-project.html#setting-up-your-first-project"><span class="std std-ref">Setting up your first project</span></a>.</p>
+<p>These files contain the data needed to define the project and its associated
+tasks.</p>
+<p>You can learn more about how to set those files up in
+<a class="reference internal" href="setting-up-your-first-project.html#setting-up-your-first-project"><span class="std std-ref">Setting up your first project</span></a>.</p>
 </section>
 <section id="loading-a-project-s-files">
 <h2>Loading a Project’s Files<a class="headerlink" href="#loading-a-project-s-files" title="Permalink to this heading">#</a></h2>
-<p>There are two ways to load a project’s files into <code class="docutils literal notranslate"><span class="pre">zoonyper</span></code>: by specifying individual file paths or by specifying a directory with the required files.</p>
+<p>There are two ways to load a project’s files into <code class="docutils literal notranslate"><span class="pre">zoonyper</span></code>: by specifying
+individual file paths or by specifying a directory with the required files.</p>
 <section id="option-1-specifying-individual-file-paths">
 <h3>Option 1: Specifying Individual File Paths<a class="headerlink" href="#option-1-specifying-individual-file-paths" title="Permalink to this heading">#</a></h3>
-<p>Providing the path for each of the five required files has the benefit of you being able to specify exactly where the files are located, individually:</p>
+<p>Providing the path for each of the five required files has the benefit of you
+being able to specify exactly where the files are located, individually:</p>
 <div class="highlight-python notranslate" id="loading-project-option-1"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="c1"># Import the Project class</span>
 <span class="linenos"> 2</span><span class="kn">from</span> <span class="nn">zoopyper</span> <span class="kn">import</span> <span class="n">Project</span>
 <span class="linenos"> 3</span>
@@ -264,18 +267,32 @@
 </div>
 <p>Here’s what each line of code does:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">zoopyper</span> <span class="pre">import</span> <span class="pre">Project</span></code>: Imports the <code class="docutils literal notranslate"><span class="pre">Project</span></code> class from the <code class="docutils literal notranslate"><span class="pre">zoopyper</span></code> package.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">classifications_path</span> <span class="pre">=</span> <span class="pre">&quot;&lt;full-path-to&gt;/classifications.csv&quot;</span></code>: Specifies the full path to the <code class="docutils literal notranslate"><span class="pre">classifications.csv</span></code> file.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">subjects_path</span> <span class="pre">=</span> <span class="pre">&quot;&lt;full-path-to&gt;/subjects.csv&quot;</span></code>: Specifies the full path to the <code class="docutils literal notranslate"><span class="pre">subjects.csv</span></code> file.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">workflows_path</span> <span class="pre">=</span> <span class="pre">&quot;&lt;full-path-to&gt;/workflows.csv&quot;</span></code>: Specifies the full path to the <code class="docutils literal notranslate"><span class="pre">workflows.csv</span></code> file.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">comments_path</span> <span class="pre">=</span> <span class="pre">&quot;&lt;full-path-to&gt;/comments.json&quot;</span></code>: Specifies the full path to the <code class="docutils literal notranslate"><span class="pre">comments.json</span></code> file.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">tags_path</span> <span class="pre">=</span> <span class="pre">&quot;&lt;full-path-to&gt;/tags.json&quot;</span></code>: Specifies the full path to the <code class="docutils literal notranslate"><span class="pre">tags.json</span></code> file.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">project</span> <span class="pre">=</span> <span class="pre">Project(...)</span></code>: Creates a <code class="docutils literal notranslate"><span class="pre">Project</span></code> object using the specified file paths.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">zoopyper</span> <span class="pre">import</span> <span class="pre">Project</span></code>: Imports the <code class="docutils literal notranslate"><span class="pre">Project</span></code> class from the
+<code class="docutils literal notranslate"><span class="pre">zoopyper</span></code> package.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">classifications_path</span> <span class="pre">=</span> <span class="pre">&quot;&lt;full-path-to&gt;/classifications.csv&quot;</span></code>: Specifies
+the full path to the <code class="docutils literal notranslate"><span class="pre">classifications.csv</span></code> file.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subjects_path</span> <span class="pre">=</span> <span class="pre">&quot;&lt;full-path-to&gt;/subjects.csv&quot;</span></code>: Specifies the full path</p></li>
+</ul>
+<blockquote>
+<div><p>to the <code class="docutils literal notranslate"><span class="pre">subjects.csv</span></code> file.</p>
+</div></blockquote>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">workflows_path</span> <span class="pre">=</span> <span class="pre">&quot;&lt;full-path-to&gt;/workflows.csv&quot;</span></code>: Specifies the full path
+to the <code class="docutils literal notranslate"><span class="pre">workflows.csv</span></code> file.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">comments_path</span> <span class="pre">=</span> <span class="pre">&quot;&lt;full-path-to&gt;/comments.json&quot;</span></code>: Specifies the full path
+to the <code class="docutils literal notranslate"><span class="pre">comments.json</span></code> file.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tags_path</span> <span class="pre">=</span> <span class="pre">&quot;&lt;full-path-to&gt;/tags.json&quot;</span></code>: Specifies the full path to the
+<code class="docutils literal notranslate"><span class="pre">tags.json</span></code> file.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">project</span> <span class="pre">=</span> <span class="pre">Project(...)</span></code>: Creates a <code class="docutils literal notranslate"><span class="pre">Project</span></code> object using the specified
+file paths.</p></li>
 </ul>
 </section>
 <section id="option-2-specifying-directory-with-required-files">
 <h3>Option 2: Specifying directory with required files<a class="headerlink" href="#option-2-specifying-directory-with-required-files" title="Permalink to this heading">#</a></h3>
-<p>In the example above, if all the required files (<code class="docutils literal notranslate"><span class="pre">classifications.csv</span></code>, <code class="docutils literal notranslate"><span class="pre">subjects.csv</span></code>, <code class="docutils literal notranslate"><span class="pre">workflows.csv</span></code>, <code class="docutils literal notranslate"><span class="pre">comments.json</span></code> and <code class="docutils literal notranslate"><span class="pre">tags.json</span></code>) are located in the same path, you can just provide the path where all of them are located:</p>
+<p>In the example above, if all the required files (<code class="docutils literal notranslate"><span class="pre">classifications.csv</span></code>,
+<code class="docutils literal notranslate"><span class="pre">subjects.csv</span></code>, <code class="docutils literal notranslate"><span class="pre">workflows.csv</span></code>, <code class="docutils literal notranslate"><span class="pre">comments.json</span></code> and <code class="docutils literal notranslate"><span class="pre">tags.json</span></code>) are
+located in the same path, you can just provide the path where all of them are
+located:</p>
 <div class="highlight-python notranslate" id="loading-project-option-2"><div class="highlight"><pre><span></span><span class="c1"># Import the Project class</span>
 <span class="kn">from</span> <span class="nn">zoopyper</span> <span class="kn">import</span> <span class="n">Project</span>
 
@@ -288,21 +305,29 @@
 </div>
 <p>Here’s what each line of code does:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">zoopyper</span> <span class="pre">import</span> <span class="pre">Project</span></code>: Imports the <code class="docutils literal notranslate"><span class="pre">Project</span></code> class from the <code class="docutils literal notranslate"><span class="pre">zoopyper</span></code> package.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">path</span> <span class="pre">=</span> <span class="pre">&quot;&lt;full-path-to-directory&gt;&quot;</span></code>: Specifies the full path to the directory containing all the required files.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">project</span> <span class="pre">=</span> <span class="pre">Project(path=path)</span></code>: Creates a <code class="docutils literal notranslate"><span class="pre">Project</span></code> object using the specified path to the directory containing all the required files.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">zoopyper</span> <span class="pre">import</span> <span class="pre">Project</span></code>: Imports the <code class="docutils literal notranslate"><span class="pre">Project</span></code> class from the
+<code class="docutils literal notranslate"><span class="pre">zoopyper</span></code> package.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">path</span> <span class="pre">=</span> <span class="pre">&quot;&lt;full-path-to-directory&gt;&quot;</span></code>: Specifies the full path to the
+directory containing all the required files.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">project</span> <span class="pre">=</span> <span class="pre">Project(path=path)</span></code>: Creates a <code class="docutils literal notranslate"><span class="pre">Project</span></code> object using the
+specified path to the directory containing all the required files.</p></li>
 </ul>
+</section>
 </section>
 <section id="tips">
-<h3>Tips<a class="headerlink" href="#tips" title="Permalink to this heading">#</a></h3>
+<h2>Tips<a class="headerlink" href="#tips" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
-<li><p>Verify that the required files are in the correct format before loading them into the Project object.</p></li>
-<li><p>Use a consistent naming convention for the file paths to make it easier to manage and maintain your code.</p></li>
-<li><p>Ensure that the file paths are correct, as incorrect paths can lead to errors and prevent the project from loading correctly.</p></li>
-<li><p>If you are working with a large project, consider breaking up the data into smaller, more manageable files to make it easier to work with.</p></li>
+<li><p>Verify that the required files are in the correct format before loading them
+into the Project object.</p></li>
+<li><p>Use a consistent naming convention for the file paths to make it easier to
+manage and maintain your code.</p></li>
+<li><p>Ensure that the file paths are correct, as incorrect paths can lead to
+errors and prevent the project from loading correctly.</p></li>
+<li><p>If you are working with a large project, consider breaking up the data into
+smaller, more manageable files to make it easier to work with.</p></li>
 </ul>
-<p>By following these tips, you can ensure that your project is loaded correctly and that you can begin working with the data right away.</p>
-</section>
+<p>By following these tips, you can ensure that your project is loaded correctly
+and that you can begin working with the data right away.</p>
 </section>
 </section>
 
@@ -367,9 +392,9 @@
 <li><a class="reference internal" href="#loading-a-project-s-files">Loading a Project’s Files</a><ul>
 <li><a class="reference internal" href="#option-1-specifying-individual-file-paths">Option 1: Specifying Individual File Paths</a></li>
 <li><a class="reference internal" href="#option-2-specifying-directory-with-required-files">Option 2: Specifying directory with required files</a></li>
-<li><a class="reference internal" href="#tips">Tips</a></li>
 </ul>
 </li>
+<li><a class="reference internal" href="#tips">Tips</a></li>
 </ul>
 </li>
 </ul>
