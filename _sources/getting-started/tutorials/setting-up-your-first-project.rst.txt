@@ -25,7 +25,8 @@ files and store them in the same folder. Here's how to do it:
    *Note: Be sure to select the correct files and formats, and avoid
    downloading the "workflow classifications" file.*
 
-#. Once the files are downloaded, move them to a new folder. Rename them as necessary so that they match these specific names:
+#. Once the files are downloaded, move them to a new folder and give each file
+   a specific name:
 
    * ``classifications.csv`` for the classifications file
    * ``subjects.csv`` for the subjects file
@@ -50,6 +51,12 @@ ready to use for your Zoonyper project.
   .. code-block:: bash
 
     $ tar -xvzf <path>
+
+.. admonition:: If your comment and tag files are downloaded with a .dms extension
+  :class: dropdown
+
+  Some browsers automatically add this extension. Edit the filename to remove .dms so that you have a .tar file.
+
 
 Initializing a ``Project`` with the Downloaded Files
 ----------------------------------------------------
