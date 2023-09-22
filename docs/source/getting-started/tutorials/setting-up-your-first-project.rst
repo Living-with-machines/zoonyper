@@ -25,8 +25,7 @@ files and store them in the same folder. Here's how to do it:
    *Note: Be sure to select the correct files and formats, and avoid
    downloading the "workflow classifications" file.*
 
-#. Once the files are downloaded, move them to a new folder and give each file
-   a specific name:
+#. Once the files are downloaded, move them to a new folder. Rename them as necessary so that they match these specific names:
 
    * ``classifications.csv`` for the classifications file
    * ``subjects.csv`` for the subjects file
