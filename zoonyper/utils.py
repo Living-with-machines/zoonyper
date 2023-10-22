@@ -686,3 +686,34 @@ def get_current_dir(
         else:
             # print("Organize by subject_id set to FALSE.")
             return Path(download_dir)
+
+
+def get_md5(path: str):
+    """
+    Computes the MD5 hash of a file.
+
+    .. versionadded:: 0.1.0
+
+    Parameters
+    ----------
+    path : str
+        The path of the file to compute the MD5 hash for.
+
+    Returns
+    -------
+    str
+        The computed MD5 hash in hexadecimal format.
+
+    Notes
+    -----
+    The function is borrowed from https://bit.ly/3TvUrd1.
+    """
+    md5_hash = hashlib.md5()
+
+    with open(path, "rb") as f:
+        content = f.read()
+        md5_hash.update(content)
+
+        digest = md5_hash.hexdigest()
+
+    return digest

@@ -14,7 +14,7 @@ from matplotlib.figure import Figure
 from tqdm import tqdm
 
 from .log import log
-from .utils import TASK_COLUMN, Utils, get_current_dir
+from .utils import TASK_COLUMN, Utils, get_current_dir, get_md5
 
 """
 TODO: this is not elegant but here we are - to save `flattened[column]`
@@ -1746,7 +1746,6 @@ class Project(Utils):
                     values = []
                     for _dict in x:
                         for detail in _dict.get("details"):
-
                             value = detail.get("value")
                             if isinstance(value, str) or isinstance(
                                 value, int
@@ -1879,36 +1878,6 @@ class Project(Utils):
                     all_files[name].append(root)
 
             return all_files
-
-        def get_md5(path: str):
-            """
-            Computes the MD5 hash of a file.
-
-            .. versionadded:: 0.1.0
-
-            Parameters
-            ----------
-            path : str
-                The path of the file to compute the MD5 hash for.
-
-            Returns
-            -------
-            str
-                The computed MD5 hash in hexadecimal format.
-
-            Notes
-            -----
-            The function is borrowed from https://bit.ly/3TvUrd1.
-            """
-            md5_hash = hashlib.md5()
-
-            with open(path, "rb") as f:
-                content = f.read()
-                md5_hash.update(content)
-
-                digest = md5_hash.hexdigest()
-
-            return digest
 
         self.SUPPRESS_WARN = True
         # Ensure self._subjects is loaded

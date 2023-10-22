@@ -8,3 +8,5 @@ tests/files/private
 docs/build
 docs/_build
 _docs
+auth
+cache
