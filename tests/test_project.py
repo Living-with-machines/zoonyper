@@ -28,6 +28,11 @@ class TestProject:
             == "ftp://image.url"
         )
 
+    def are_subjects_disambiguated(self):
+        assert self.project.are_subjects_disambiguated() == False
+        self.project.disambiguate_subjects("tests/data/downloads")
+        assert self.project.are_subjects_disambiguated() == True
+
     def test_tags(self):
         tags = self.project.tags
         assert len(tags) == 3

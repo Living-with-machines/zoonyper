@@ -1448,6 +1448,18 @@ class Project(Utils):
 
         return self._subjects
 
+    def are_subjects_disambiguated(self) -> bool:
+        """
+        Checks if `disambiguate_subjects` has been successfully executed before to disambiguate
+        subjects.
+
+        Returns
+        -------
+        bool
+            True if subjects are disambiguated, False otherwise.
+        """
+        return "subject_id_disambiguated" in self.subjects.columns
+
     @property
     def classifications(self) -> pd.DataFrame:
         """
@@ -1971,7 +1983,13 @@ class Project(Utils):
 
             # Test to ensure that there are not multiple files with same name
             # but different hashes
-            if [x for x, y in hashes_by_file.items() if len(y) > 1]:
+            duplicates = [filename for filename, hashes in hashes_by_file.items() if len(hashes) > 1]
+
+            if duplicates:
+                print("Files with the same name but different hashes:")
+                for filename in duplicates:
+                    print(filename)
+
                 raise RuntimeError(
                     "Looks like there are files with the same name that are \
                     different from one another. This should not be the case \
