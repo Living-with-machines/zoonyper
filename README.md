@@ -89,6 +89,13 @@ erDiagram
 <!-- ALL-CONTRIBUTORS-LIST:START -->
 <!-- prettier-ignore-start -->
 <!-- markdownlint-disable -->
+<table>
+  <tbody>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="http://www.westerling.nu"><img src="https://avatars.githubusercontent.com/u/7298727?v=4?s=100" width="100px;" alt="Kalle Westerling"/><br /><sub><b>Kalle Westerling</b></sub></a><br /><a href="https://github.com/Living-with-machines/zoonyper/commits?author=kallewesterling" title="Documentation">📖</a> <a href="#ideas-kallewesterling" title="Ideas, Planning, & Feedback">🤔</a> <a href="#projectManagement-kallewesterling" title="Project Management">📆</a> <a href="https://github.com/Living-with-machines/zoonyper/pulls?q=is%3Apr+reviewed-by%3Akallewesterling" title="Reviewed Pull Requests">👀</a></td>
+    </tr>
+  </tbody>
+</table>
 
 <!-- markdownlint-restore -->
 <!-- prettier-ignore-end -->
