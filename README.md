@@ -1,5 +1,6 @@
-# About `zoonyper`
+# Zoonyper: Processing Zooniverse Annotations and Metadata
 
+[![Zenodo record for repository](https://zenodo.org/badge/DOI/10.5281/zenodo.13946466.svg)](https://doi.org/10.5281/zenodo.13946466)
 [![All Contributors](https://img.shields.io/github/all-contributors/Living-with-machines/zoonyper?color=ee8449&style=flat-square)](#contributors)
 
 **Zoonyper** is a Python library, designed to make it easy for users to import and process Zooniverse annotations and their metadata in your own Python code. It is especially designed for use in [Jupyter Notebooks](https://jupyter.org/).
