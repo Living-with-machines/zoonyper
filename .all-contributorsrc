@@ -10,5 +10,20 @@
   "repoType": "github",
   "repoHost": "https://github.com",
   "skipCi": true,
-  "commitConvention": "angular"
+  "commitConvention": "angular",
+  "commitType": "docs",
+  "contributors": [
+    {
+      "login": "kallewesterling",
+      "name": "Kalle Westerling",
+      "avatar_url": "https://avatars.githubusercontent.com/u/7298727?v=4",
+      "profile": "http://www.westerling.nu",
+      "contributions": [
+        "doc",
+        "ideas",
+        "projectManagement",
+        "review"
+      ]
+    }
+  ]
 }
