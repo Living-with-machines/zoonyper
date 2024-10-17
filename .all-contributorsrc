@@ -24,6 +24,18 @@
         "projectManagement",
         "review"
       ]
+    },
+    {
+      "login": "mialondon",
+      "name": "Mia",
+      "avatar_url": "https://avatars.githubusercontent.com/u/380763?v=4",
+      "profile": "http://openobjects.org.uk",
+      "contributions": [
+        "doc",
+        "ideas",
+        "projectManagement",
+        "review"
+      ]
     }
   ]
 }
