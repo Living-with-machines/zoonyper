@@ -52,12 +52,6 @@ ready to use for your Zoonyper project.
 
     $ tar -xvzf <path>
 
-.. admonition:: If your comment and tag files are downloaded with a .dms extension
-  :class: dropdown
-
-  Some browsers automatically add this extension. Edit the filename to remove .dms so that you have a .tar file.
-
-
 Initializing a ``Project`` with the Downloaded Files
 ----------------------------------------------------
 
